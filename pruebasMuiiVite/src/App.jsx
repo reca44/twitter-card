@@ -64,31 +64,37 @@ export default function ToggleColorMode() {
 
   const usuarios = [
     {
+      id:1,
       userName: 'reca44',
       siguiendo: true,
       nombre: 'Antonio Viña López'
     },
     {
-      userName: 'IbaiLlano',
+      id:2,
+      userName: 'IbaiLlanos',
       siguiendo: false,
       nombre: 'Otro tipo'
     },
     {
+      id:3,
       userName: 'Ibai',
       siguiendo: false,
       nombre: 'Otro tipo2'
     },
     {
+      id:4,
       userName: 'Llanos',
       siguiendo: false,
       nombre: 'Otro tipo3'
     },
     {
+      id:5,
       userName: 'patacas',
       siguiendo: false,
       nombre: 'Otro tipo4'
     },
     {
+      id:6,
       userName: 'prueba',
       siguiendo: false,
       nombre: 'mas prueba'
@@ -101,7 +107,7 @@ export default function ToggleColorMode() {
         <Oscuro />
         <Fondo />
         {/* <h1>pruebas tablas</h1> */}
-        <h1>prueba TwitterCard</h1>
+        
         {/* <FirstNav />
         <p></p>
         <SecondNav />
@@ -112,8 +118,9 @@ export default function ToggleColorMode() {
         <Cardiguana />
         <MiImput />
         </div> */}
-        {usuarios.map(({ nombre, userName, siguiendo }) =>(
-          <TwitterCard userName={userName} isFollow={siguiendo}>{nombre}</TwitterCard>
+        <h1>prueba TwitterCard</h1>
+        {usuarios.map(({id, nombre, userName, siguiendo }) =>(
+          <TwitterCard key={id} userName={userName} isFollow={siguiendo}>{nombre}</TwitterCard>
         ))
         }
         {/* <TwitterCard userName={userNameDos} isFollow={siguiendo} >Otro Viña López</TwitterCard> */}
